@@ -44,7 +44,10 @@ export default function BookTable() {
           </tr>
         </thead>
         <tbody className="table-group-divider">
-          <BookRow bookListState={bookListState} />
+          <BookRow
+            bookListState={bookListState}
+            setBookListState={setBookListState}
+          />
         </tbody>
       </table>
     </>
