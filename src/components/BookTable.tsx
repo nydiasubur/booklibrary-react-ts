@@ -2,12 +2,13 @@ import { bookList } from "./BookList";
 import { useState } from "react";
 import BookRow from "./BookRow";
 import { bookListProps, bookListArrayProps } from "../types";
+import AddBook from "./AddBook";
 import React from "react";
 
 export default function BookTable() {
   const [bookListState, setBookListState] =
     useState<bookListArrayProps>(bookList);
-  console.log(`from table: ${JSON.stringify(bookListState)}`);
+  //console.log(`from table: ${JSON.stringify(bookListState)}`);
   return (
     <>
       <div className="input-group mb-3">
@@ -26,7 +27,10 @@ export default function BookTable() {
       </div>
       <div>
         have a book to add?
-        <a href="#"> add here</a>
+        <AddBook
+          bookListState={bookListState}
+          setBookListState={setBookListState}
+        />
       </div>
       {/* book table */}
       <table className="table">

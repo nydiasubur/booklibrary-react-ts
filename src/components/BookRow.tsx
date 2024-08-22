@@ -2,7 +2,7 @@ import React from "react";
 import { bookListProps, bookListArrayProps } from "../types";
 
 export default function BookRow ({ bookListState<bookListArrayProps>}){
-  console.log(`from bookrow: ${JSON.stringify(bookListState)}`);
+  //console.log(`from bookrow: ${JSON.stringify(bookListState)}`);
 
   return (
     <>
